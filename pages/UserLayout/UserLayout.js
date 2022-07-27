@@ -8,26 +8,21 @@ import useSWR from "swr";
 import { fetcher } from "../../utils";
 
 const UserLayout = ({ userData }) => {
-  // return <div>{console.log("API data here -> ", userData)}</div>;
-
   const [search, setSearch] = useState("");
   const [searchedUser, setSearchedUser] = useState(userData);
 
   const onSearchChange = (event) => {
     setSearch(event.target.value);
-    // useSearch(event?.target?.value);
   };
 
   useEffect(() => {
     if (search !== "") {
       const delayDebounceFn = setTimeout(async () => {
-        console.log("Search -> ", search);
         // Send Axios request here
         const searchData = await axios.get(
           `https://jsonplaceholder.typicode.com/users?name=${search}`
         );
         const searchDataUser = searchData?.data;
-        console.log("searchDataUser : ", searchDataUser);
         setSearchedUser(searchDataUser);
       }, 1500);
 
