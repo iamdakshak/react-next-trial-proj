@@ -1,5 +1,5 @@
 {
-  "name": "next-trial",
+  "name": "react-next-trial-proj",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
+    "classnames": "^2.3.1",
     "next": "12.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.54.0",
+    "styled-components": "^5.3.5",
+    "swr": "^1.3.0",
+    "tachyons": "^4.12.0"
   },
   "devDependencies": {
     "eslint": "8.20.0",
